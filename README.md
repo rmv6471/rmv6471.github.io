@@ -139,7 +139,7 @@ Key takeaways:
 ## 🔗 Code  
 You can view the full Google Colab notebook containing all data processing, model training, and analysis steps here:
 
-[**Solar Prediction Notebook**]((https://colab.research.google.com/drive/14ymiDcDtSGK879MxNHM87TGDPdSA6DMq?usp=sharing))
+[**Solar Prediction Notebook**](https://colab.research.google.com/drive/14ymiDcDtSGK879MxNHM87TGDPdSA6DMq?usp=sharing)
 
 ---
 
