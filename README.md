@@ -2,36 +2,128 @@
 ### AOS C111/204 Final Project  
 ## Predicting Solar Panel Energy Output Using Machine Learning
 
-Welcome to my final project website!  
-This project explores how environmental conditions such as solar irradiance, temperature, and time of day influence solar power generation. Using data from two solar plants in India, I trained a machine learning model to predict **DC power output** with very high accuracy (R² ≈ 0.987).
+---
+
+## Introduction
+
+Solar energy is a major component of global renewable energy infrastructure, but its output is highly sensitive to environmental conditions such as irradiance, temperature, and time of day. Accurate forecasting of solar power generation is important for energy planning, grid stability, and efficient use of storage systems.
+
+In this project, I used machine learning techniques to predict **DC power output** from two solar plants in India. The model achieved very high accuracy (R² ≈ 0.987), demonstrating that solar power production can be predicted well from weather conditions.
 
 ---
 
-## 🔗 Final Project Report  
-Click below to read my full scientific report:
+## Data Description
 
-👉 [**Final Project Report**](report.md)
+The dataset used comes from Kaggle and consists of measurements from **two solar power plants**, each with:
+
+- **22 inverters providing generation data**  
+- **One weather sensor providing environmental data**
+
+Each plant includes:
+
+### Generation Data (per inverter)
+- DATE_TIME  
+- PLANT_ID  
+- SOURCE_KEY  
+- DC_POWER  
+- AC_POWER  
+- DAILY_YIELD  
+- TOTAL_YIELD  
+
+### Weather Sensor Data (per plant)
+- DATE_TIME  
+- AMBIENT_TEMPERATURE  
+- MODULE_TEMPERATURE  
+- IRRADIATION  
+
+### Preprocessing Steps
+- Parsed timestamps using `dayfirst=True`  
+- Merged generation + weather data on `DATE_TIME` and `PLANT_ID`  
+- Added engineered features: hour, month, day of year  
+- Removed invalid values  
+- Combined both plants into a single dataset (~136,000 rows)
 
 ---
 
-## 🔗 Code  
-Colab notebook containing all data preparation, model training, and analysis:
+## Methodology
 
-👉 [**Solar Prediction Code (Colab Notebook)**](assets/solar_prediction.ipynb)
+Two supervised learning models were trained:
+
+### 1. Linear Regression (Baseline)
+A simple linear model used to establish baseline performance.
+
+### 2. Random Forest Regressor
+A nonlinear ensemble model able to capture complex interactions between variables.
+
+### Features Used
+- Ambient temperature  
+- Module temperature  
+- Irradiation  
+- Hour  
+- Month  
+- Day of year  
+- Plant ID  
+
+The dataset was split into:
+- **80% training**
+- **20% testing**
+
+Performance metrics:
+- RMSE  
+- MAE  
+- R²  
 
 ---
 
-## 📊 Summary of Results
-- Random Forest Regression achieved **R² = 0.987**
-- Irradiance was the strongest predictor of power output
-- Model successfully captured nonlinear relationships in the dataset
+## Results
+
+### Linear Regression
+- RMSE: 1744.96  
+- MAE: 1367.86  
+- R²: 0.709  
+
+### Random Forest Regressor
+- **RMSE: 362.10**  
+- **MAE: 126.45**  
+- **R²: 0.987**  
+
+### Key Findings
+- Irradiance was the strongest predictor of DC power  
+- Plant-specific differences significantly influenced output  
+- Random Forest captured nonlinear patterns much better than Linear Regression  
+- Actual vs. predicted values aligned very closely along the 1:1 line  
 
 ---
 
-## 📁 Dataset
-Data sourced from Kaggle:  
-*Solar Power Generation Data — Plant 1 & Plant 2*
+## Discussion
+
+The results clearly show that **solar irradiance** is the dominant factor influencing power generation, which aligns with physical expectations.  
+Additionally:
+
+- The two plants exhibited different behaviors, suggesting differences in equipment or configuration.
+- Nonlinear relationships (e.g., diminishing output at extreme temperatures or irradiance levels) were captured effectively by the Random Forest model.
+- Time features (hour, day, month) helped model daily and seasonal patterns in sunlight.
+
+This demonstrates that machine learning can reliably forecast short-term solar energy output using relatively simple environmental measurements.
 
 ---
 
-Thanks for visiting!
+## Conclusion
+
+This project demonstrates the effectiveness of machine learning in predicting solar panel output.  
+Key takeaways:
+
+- Random Forest achieved extremely high accuracy (R² ≈ 0.987)  
+- Solar irradiance is by far the most influential variable  
+- Prediction models like this can help utilities and operators with load balancing and renewable integration  
+- Future improvements could include cloud cover data, humidity, AC power prediction, or long-term energy forecasts  
+
+---
+
+## References
+
+1. Kaggle — *Solar Power Generation Data*:  
+   https://www.kaggle.com/datasets/anikannal/solar-power-generation-data  
+2. Scikit-learn documentation — https://scikit-learn.org/  
+3. AOS C111/204 Course Materials  
+4. Hastie, Tibshirani & Friedman — *The Elements of Statistical Learning*
