@@ -87,7 +87,7 @@ The correlation heatmap below visualizes the relationships between all numerical
 
 A strong positive correlation is observed between **irradiation** and **DC power**, which aligns with physical expectations: the more sunlight hitting the panels, the more electrical energy they generate. Module temperature also shows moderate correlation with power output because panels heat up during periods of strong sunlight.
 
-![Correlation Heatmap](assets/heatmap.png)
+![Correlation Heatmap](assets/IMG/heatmap.png)
 
 *Figure 1: Irradiation shows the strongest correlation with DC power, making it the most important predictor.*
 
@@ -99,7 +99,7 @@ The scatter plot below compares the Random Forest model’s predictions against 
 
 Most points lie very close to the diagonal line, meaning the model accurately predicts power generation across nearly the entire output range. This is supported by the high R² value (≈ 0.987), low RMSE, and low MAE.
 
-![Actual vs Predicted](assets/scatterplot.png)
+![Actual vs Predicted](assets/IMG/scatterplot.png)
 
 *Figure 2: Random Forest predictions closely match actual DC power values, showing strong model performance.*
 
