@@ -81,21 +81,28 @@ Performance metrics:
 
 ## Results
 
-### Linear Regression
-- RMSE: 1744.96  
-- MAE: 1367.86  
-- R²: 0.709  
+### 1. Correlation Heatmap
 
-### Random Forest Regressor
-- **RMSE: 362.10**  
-- **MAE: 126.45**  
-- **R²: 0.987**  
+The correlation heatmap below visualizes the relationships between all numerical features in the dataset, including temperature, irradiation, time-of-day variables, and DC power output.
 
-### Key Findings
-- Irradiance was the strongest predictor of DC power  
-- Plant-specific differences significantly influenced output  
-- Random Forest captured nonlinear patterns much better than Linear Regression  
-- Actual vs. predicted values aligned very closely along the 1:1 line  
+A strong positive correlation is observed between **irradiation** and **DC power**, which aligns with physical expectations: the more sunlight hitting the panels, the more electrical energy they generate. Module temperature also shows moderate correlation with power output because panels heat up during periods of strong sunlight.
+
+![Correlation Heatmap](assets/heatmap.png)
+
+*Figure 1: Irradiation shows the strongest correlation with DC power, making it the most important predictor.*
+
+---
+
+### 2. Model Performance — Actual vs Predicted DC Power
+
+The scatter plot below compares the Random Forest model’s predictions against the actual DC power values. Each point represents one observation from the test set.
+
+Most points lie very close to the diagonal line, meaning the model accurately predicts power generation across nearly the entire output range. This is supported by the high R² value (≈ 0.987), low RMSE, and low MAE.
+
+![Actual vs Predicted](assets/scatterplot.png)
+
+*Figure 2: Random Forest predictions closely match actual DC power values, showing strong model performance.*
+
 
 ---
 
