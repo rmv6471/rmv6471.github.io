@@ -20,8 +20,8 @@ Ultimately, the model predicted **DC power output** from two solar plants in Ind
 
 The dataset used comes from Kaggle and consists of measurements from **two solar power plants**, each with:
 
-- **22 inverters providing generation data**  
-- **One weather sensor providing environmental data**
+- 22 inverters providing generation data**  
+- One weather sensor providing environmental data**
 
 Each plant includes:
 
