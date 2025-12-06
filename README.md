@@ -82,7 +82,8 @@ DC power represents the raw power output generated directly solar panels
 before they pass through the inverter. Since it is not influenced by
 inverter efficiency losses or converstion fluctions, DC power is best for measuring
 solely the imapct of weather on solar panel performance.
-  
+
+  ---
 
 ## Results
 
