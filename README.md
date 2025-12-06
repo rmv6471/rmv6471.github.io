@@ -75,8 +75,13 @@ The dataset was split into:
 Performance metrics:
 - RMSE  
 - MAE  
-- R²  
-
+- R²
+- 
+In this project, I chose **DC_POWER** as the target variable instead of AC power.
+DC power represents the raw power output generated directly solar panels
+before they pass through the inverter. Since it is not influenced by
+inverter efficiency losses or converstion fluctions, DC Power is best for measuring
+solely the imapct of weather on solar panel performance.
 ---
 
 ## Results
@@ -85,7 +90,7 @@ Performance metrics:
 
 The correlation heatmap below visualizes the relationships between all numerical features in the dataset, including temperature, irradiation, time-of-day variables, and DC power output.
 
-A strong positive correlation is observed between **irradiation** and **DC power**, which aligns with physical expectations: the more sunlight hitting the panels, the more electrical energy they generate. Module temperature also shows moderate correlation with power output because panels heat up during periods of strong sunlight.
+A strong positive correlation is observed between **irradiation** and **DC power**. This correlation directly aligns with physical expecations, as the more sunlight hits panels, the more energy they are able to generate. Additionally, module temperature also shows moderate correlation with power output because panels heat up during periods of strong sunlight.
 
 ![Correlation Heatmap](assets/IMG/heatmap.png)
 
@@ -137,4 +142,3 @@ Key takeaways:
    https://www.kaggle.com/datasets/anikannal/solar-power-generation-data  
 2. Scikit-learn documentation — https://scikit-learn.org/  
 3. AOS C111/204 Course Materials  
-4. Hastie, Tibshirani & Friedman — *The Elements of Statistical Learning*
