@@ -1,5 +1,10 @@
-## Introduction
+# Ryan Tran-Vu  
+### AOS C111/204 Final Project  
+## Predicting Solar Panel Energy Output Using Machine Learning
 
+---
+
+## Introduction
 Solar energy is a major component of global renewable energy infrastructure, but its output is highly sensitive to environmental conditions such as irradiance, temperature, and time of day. Accurate forecasting of solar power generation is important for energy planning, grid stability, and efficient use of storage systems.
 
 In this project, I used machine learning techniques to predict **DC power output** from two solar plants in India. The model achieved very high accuracy (R² ≈ 0.987), demonstrating that solar power production can be predicted well from weather conditions.
