@@ -134,6 +134,12 @@ Key takeaways:
 - Prediction models like this can help utilities and operators with load balancing and renewable integration  
 - Future improvements could include cloud cover data, humidity, AC power prediction, or long-term energy forecasts  
 
+
+## 🔗 Code  
+You can view the full Google Colab notebook containing all data processing, model training, and analysis steps here:
+
+👉 [**Solar Prediction Notebook**]([YOUR_COLAB_LINK_HERE](https://colab.research.google.com/drive/14ymiDcDtSGK879MxNHM87TGDPdSA6DMq?usp=sharing))
+
 ---
 
 ## References
