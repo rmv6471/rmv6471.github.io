@@ -69,8 +69,8 @@ A nonlinear ensemble model able to capture complex interactions between variable
 - Plant ID  
 
 The dataset was split into:
-- **80% training**
-- **20% testing**
+- 80% training
+- 20% testing
 
 Performance metrics:
 - RMSE  
