@@ -77,12 +77,12 @@ Performance metrics:
 - MAE  
 - R²
 - 
-In this project, I chose **DC_POWER** as the target variable instead of AC power.
+In this project, I chose DC power as the target variable instead of AC power.
 DC power represents the raw power output generated directly solar panels
 before they pass through the inverter. Since it is not influenced by
-inverter efficiency losses or converstion fluctions, DC Power is best for measuring
+inverter efficiency losses or converstion fluctions, DC power is best for measuring
 solely the imapct of weather on solar panel performance.
----
+  
 
 ## Results
 
