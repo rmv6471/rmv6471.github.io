@@ -5,9 +5,14 @@
 ---
 
 ## Introduction
-Solar energy is a major component of global renewable energy infrastructure, but its output is highly sensitive to environmental conditions such as irradiance, temperature, and time of day. Accurate forecasting of solar power generation is important for energy planning, grid stability, and efficient use of storage systems.
+As the world moves towards cleaner energy sources, one popular choice the world 
+has adopted is the use of solar panels. However, the energy output of these panels
+are heavily influenced by factors such as weather conditions, temperature, humidity,
+and wind speed. 
+This project sought to train a machine learning model that is able to accurately 
+predict the amount of energy a given solar power plant will generate. 
 
-In this project, I used machine learning techniques to predict **DC power output** from two solar plants in India. The model achieved very high accuracy (R² ≈ 0.987), demonstrating that solar power production can be predicted well from weather conditions.
+Ultimately, the model predicted **DC power output** from two solar plants in India. The model achieved very high accuracy (R² ≈ 0.987), demonstrating that solar power production can be predicted well from weather conditions.
 
 ---
 
