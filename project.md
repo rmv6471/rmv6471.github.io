@@ -2,7 +2,7 @@
 
 ## My Project
 
-I applied machine learning techniques to investigate... Below is my report.
+I applied machine learning techniques to investigate if it is possible to predict solar panel energy intake based on weather conditions.
 
 ***
 
